@@ -58,10 +58,9 @@ var app = {
 
         scanner.scan( function (result) { 
 
-        	var erg = "Ergebnis!!!! "+result.text+"\n Format: "+result.format;
+        	var erg = result.text+"\n Format: "+result.format;
         	document.getElementById("result_code").innerHTML = erg;
-            //window.location.replace("https://apex.mt-ag.com/pls/apex/f?p=205:2:0::::P2_PDT_EAN:"+result.text);
-			window.location = "https://apex.mt-ag.com/pls/apex/f?p=205:2:0::::P2_PDT_EAN:"+result.text;
+            window.location = "https://apex.mt-ag.com/pls/apex/f?p=205:2:0::::P2_PDT_EAN:"+result.text;
             document.getElementById("info").innerHTML = result.text;
         
            // document.location.href = "https://apex.mt-ag.com/pls/apex/f?p=205:2:0::::P2_PDT_EAN:"+result.text;
